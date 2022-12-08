@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:whatsaap_app/callls.dart';
 import 'package:whatsaap_app/chats.dart';
+import 'package:whatsaap_app/status.dart';
 
 class tablayout extends StatefulWidget {
   const tablayout({super.key});
@@ -22,10 +24,11 @@ class _tablayoutState extends State<tablayout>
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        // backgroundColor: Color(0xFF273443),
         appBar: AppBar(
           title: const Text("Whatsaap"),
           backgroundColor: Color(0xFF075E54),
-          actions: [
+          actions: const [
             Icon(Icons.camera_alt_outlined),
             Padding(padding: EdgeInsets.only(right: 12)),
             Icon(Icons.search),
@@ -36,9 +39,9 @@ class _tablayoutState extends State<tablayout>
             controller: _tabController,
             indicatorColor: Colors.white,
             labelPadding: EdgeInsets.all(4),
-            tabs: [
+            tabs: const [
               Tab(
-                icon: Icon(Icons.group),
+                icon: Icon(Icons.groups),
               ),
               Tab(
                 text: "CHATS",
@@ -53,45 +56,12 @@ class _tablayoutState extends State<tablayout>
           ),
         ),
         body: TabBarView(controller: _tabController, children: [
-          Text("1"),
+          communityview(),
           chat(),
-          Text("3"),
-          Text("4"),
+          status(),
+          calls(),
         ]),
       ),
     );
   }
 }
-
-// class tablayout extends StatelessWidget with SingleTickerProviderStateMixin {
-//   const tablayout({super.key});
-
-//   TabController _controller;
-//   @override
-//   void initState() {
-//     super.initState();
-//     _controller = TabController(length: 4, vsync: this, initialIndex: 0);
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: Text("Whatsapp"),
-//           backgroundColor: Color(0xFF128C7E),
-//           actions: [Icon(Icons.search), Icon(Icons.more_vert)],
-//           bottom: TabBar(
-//             controller: _controller,
-//             tabs: [
-//               Tab(
-//                 icon: Icon(Icons.camera_alt),
-//               )
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }

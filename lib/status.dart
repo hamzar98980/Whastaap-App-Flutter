@@ -80,7 +80,7 @@ simplestatus_view(
 ) {
   return ListTile(
     leading: const CircleAvatar(
-      backgroundColor: Colors.red,
+      backgroundImage: AssetImage('Images/img1.jpg'),
     ),
     title: Text("$name"),
     subtitle: Text("$msg"),

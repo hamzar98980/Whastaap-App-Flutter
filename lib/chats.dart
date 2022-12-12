@@ -5,23 +5,33 @@ class chat extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          chatview("Hamza", "Hello World", "Today"),
-          chatview2("Ali", "Hello World", "Today"),
-          chatview("Hamza", "Hello World", "Yesterday"),
-          chatview("Moiz", "Hello World", "Yesterday"),
-          chatview("Tom Cruise", "Hello World", "Yesterday"),
-          chatview2("Babar Azam", "Hello World", "06/12/2022"),
-          chatview2("Virat Kholi", "Hello World", "05/12/2022"),
-          chatview2("Zain", "Hello World", "05/12/2022"),
-          chatview2("Ali", "Hello World", "07/12/2022"),
-          chatview2("Elon Musk", "Hello World", "06/12/2022"),
-          chatview2("Bill Gates", "Hello World", "05/12/2022"),
-          chatview2("Modi", "Hello World", "05/12/2022"),
-          chatview2("Shobaz Shareef", "Hello World", "07/12/2022"),
-        ],
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: Icon(Icons.chat),
+          backgroundColor: Color(0xFF075E54),
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              chatview("Hamza", "Hello World", "Today"),
+              chatview2("Ali", "Hello World", "Today"),
+              chatview("Hamza", "Hello World", "Yesterday"),
+              chatview("Moiz", "Hello World", "Yesterday"),
+              chatview("Tom Cruise", "Hello World", "Yesterday"),
+              chatview2("Babar Azam", "Hello World", "06/12/2022"),
+              chatview2("Virat Kholi", "Hello World", "05/12/2022"),
+              chatview2("Zain", "Hello World", "05/12/2022"),
+              chatview2("Ali", "Hello World", "07/12/2022"),
+              chatview2("Elon Musk", "Hello World", "06/12/2022"),
+              chatview2("Bill Gates", "Hello World", "05/12/2022"),
+              chatview2("Modi", "Hello World", "05/12/2022"),
+              chatview2("Shobaz Shareef", "Hello World", "07/12/2022"),
+            ],
+          ),
+        ),
       ),
     );
   }
